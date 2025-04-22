@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q&A Session</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="main-container">
+        <div class="item-1" id="items">
+             <div class="question-1">
+               <h4> Do You Accept All Major Credit Cards?</h4>
+               <button class="plus-btn" onclick="replace" id="plus" >+</button>
+             </div>
+             <div class="hidden" id="hiddenid">
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus quaerat, magni numquam repellat reprehenderit.</p>
+             </div>
+         </div>
+
+
+         <div class="item-1" id="items">
+            <div class="question-1">
+               <h4> Do You Suppport Local Farmers?</h4>
+               <button class="plus-btn" onclick="replace" id="plus">+</button>
+            </div>
+
+            <div class="hidden" id="hiddenid">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus quaerat, magni numquam repellat reprehenderit.</p>
+            </div>
+        </div>
+
+
+        <div class="item-1" id="items">
+            <div class="question-1">
+               <h4> Do You Use Organic Ingredients</h4>
+               <button class="plus-btn" onclick="replace" id="plus" >+</button>
+            </div>
+
+            <div class="hidden" id="hiddenid">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est dolore illo dolores quia nemo doloribus quaerat, magni numquam repellat reprehenderit.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+</body>
+<script>
+    // let parent=document.getElementsByClassName('main-container');
+    // let button1=document.getElementsByClassName('plus-btn');
+    // function replace(){
+    //    let x=document.getElementById('hidden');
+
+    //    x.style.display='block';
+    // }
+    
+    /* var plusBtn=document.getElementById("plus");
+     var hidBtn=document.getElementById("hiddenid");
+     plusBtn.onclick=replace;
+
+     function replace(){
+        document.createElement('hr');
+        hidBtn.style.display="block";
+        plusBtn.innerText='-'
+        plusBtn.onclick=backTo;
+     }
+
+     function backTo(){
+     hidBtn.style.display="none";
+     plusBtn.innerText='+';
+     plusBtn.onclick=replace;
+     }*/
+    /* const buttons = document.querySelectorAll('.plus-btn');
+
+buttons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const answer = btn.parentElement.nextElementSibling;
+    const isVisible = answer.style.display === 'block';
+
+    // Hide all others before toggling
+    document.querySelectorAll('.hidden').forEach(h => h.style.display = 'none');
+    document.querySelectorAll('.plus-btn').forEach(b => b.innerText = '+');
+
+    if (!isVisible) {
+      answer.style.display = 'block';
+      btn.innerText = '-';
+    }
+  });
+});*/
+const buttons = document.querySelectorAll('.plus-btn');
+
+buttons.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const answer = btn.parentElement.nextElementSibling;
+
+    const isVisible = answer.style.display === 'block';
+
+    if (!isVisible) {
+      answer.style.display = 'block';
+      btn.innerText = '-';
+    } else {
+      answer.style.display = 'none';
+      btn.innerText = '+';
+    }
+  });
+});
+</script>
+
+</html>
